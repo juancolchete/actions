@@ -6,5 +6,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: 
+      name: dev
     steps:
-      - run: echo ${{ vars.hello }}
+      - run: echo ${{ secrets.TEST_ENV_VAR }}
+      - run: echo ${{ vars.TEST_VARS }}
+        
